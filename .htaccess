@@ -1,0 +1,86 @@
+### PROTECT FILES ###
+<FilesMatch "\.(htaccess|htpasswd|ini|fla|psd|log|sh)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+
+RewriteEngine on
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php
+RewriteRule ^index\.php$ / [L,R=301]
+
+
+RewriteRule ^matematyka-geometria-obwod php/Math/Geometry/PerimeterContentMenu.php [NC]
+RewriteRule ^matematyka-geometria-pole-powierzchni php/Math/Geometry/AreaContentMenu.php [NC]
+RewriteRule ^math-geometry-perimeter php/Math/Geometry/PerimeterContentMenu.php [NC]
+RewriteRule ^math-geometry-area php/Math/Geometry/AreaContentMenu.php [NC]
+RewriteRule ^matematyka-geometria-trygonometria php/Math/Geometry/trygFunctionsContentMenu.php [NC]
+RewriteRule ^math-geometry-trygonometry php/Math/Geometry/trygFunctionsContentMenu.php [NC]
+
+RewriteRule ^matematyka-geometria-redukcja-funkcji-trygonometrycznych php/Math/Geometry/ReductionContentMenu.php [NC]
+RewriteRule ^math-geometry-reduction-of-trygonometry-functions php/Math/Geometry/ReductionContentMenu.php [NC]
+
+RewriteRule ^matematyka-algebra-logarytmy php/Math/Algebra/LogarithmContentMenu.php [NC]
+RewriteRule ^math-algebra-logarithm php/Math/Algebra/LogarithmContentMenu.php [NC]
+RewriteRule ^matematyka-algebra-wartosc-bezwzgledna php/Math/Algebra/AbsoluteValueContentMenu.php [NC]
+RewriteRule ^math-algebra-absolute-value php/Math/Algebra/AbsoluteValueContentMenu.php [NC]
+RewriteRule ^matematyka-logika-wartosc-logiczna-zdania php/Math/Logic/TruthValueContentMenu.php [NC]
+RewriteRule ^math-logic-truth-value php/Math/Logic/TruthValueContentMenu.php [NC]
+RewriteRule ^matematyka-logika-rachunek-zdan php/Math/Logic/PropositionalCalculusContentMenu.php [NC]
+RewriteRule ^math-logic-propositional-calculus php/Math/Logic/PropositionalCalculusContentMenu.php [NC]
+RewriteRule ^matematyka-logika-kwalifikatory php/Math/Logic/QuantifiersContentMenu.php [NC]
+RewriteRule ^math-logic-quantifiers php/Math/Logic/QuantifiersContentMenu.php [NC]
+RewriteRule ^matematyka-logika-oznaczenia php/Math/Logic/SignsContentMenu.php [NC]
+RewriteRule ^math-logic-signs php/Math/Logic/SignsContentMenu.php [NC]
+RewriteRule ^matematyka-logika-zbiory-liczbowe php/Math/Logic/SetsOfNumbersContentMenu.php [NC]
+RewriteRule ^math-logic-sets-of-numbers php/Math/Logic/SetsOfNumbersContentMenu.php [NC]
+RewriteRule ^matematyka-logika-szczegolne-zbiory php/Math/Logic/UniqueSetsContentMenu.php [NC]
+RewriteRule ^math-logic-unique-sets php/Math/Logic/UniqueSetsContentMenu.php [NC]
+RewriteRule ^matematyka-logika-operacje-na-zbiorach php/Math/Logic/SetsOperationsContentMenu.php [NC]
+RewriteRule ^math-logic-sets-operations php/Math/Logic/SetsOperationsContentMenu.php [NC]
+RewriteRule ^matematyka-logika-rachunek-zbiorow php/Math/Logic/LawsOfSetsAlgebraContentMenu.php [NC]
+RewriteRule ^math-logic-laws-of-sets-algebra php/Math/Logic/LawsOfSetsAlgebraContentMenu.php [NC]
+RewriteRule ^matematyka-algebra-podstawy php/Math/Algebra/BasicsContentMenu.php [NC]
+RewriteRule ^math-algebra-basics php/Math/Algebra/BasicsContentMenu.php [NC]
+RewriteRule ^matematyka-algebra-potegi php/Math/Algebra/ExponentiationContentMenu.php [NC]
+RewriteRule ^math-algebra-exponentiation php/Math/Algebra/ExponentiationContentMenu.php [NC]
+RewriteRule ^matematyka-algebra-pierwiastki php/Math/Algebra/RootsContentMenu.php [NC]
+RewriteRule ^math-algebra-roots php/Math/Algebra/RootsContentMenu.php [NC]
+RewriteRule ^matematyka-algebra-wzory-skroconego-mnozenia php/Math/Algebra/ShortMultiplicationFormulasContentMenu.php [NC]
+RewriteRule ^math-algebra-short-multiplication-formulas php/Math/Algebra/ShortMultiplicationFormulasContentMenu.php [NC]
+RewriteRule ^matematyka-algebra-rozwiazania-rownan-algebraicznych php/Math/Algebra/AlgebraicEquationsSolutionsContentMenu.php [NC]
+RewriteRule ^math-algebra-algebraic-equations-solutions php/Math/Algebra/AlgebraicEquationsSolutionsContentMenu.php [NC]
+
+
+RewriteRule ^math-geometry php/Math/Geometry/geometryCategories.php [NC]
+RewriteRule ^matematyka-geometria php/Math/Geometry/geometryCategories.php [NC]
+RewriteRule ^math-algebra php/Math/Algebra/algebraCategories.php [NC]
+RewriteRule ^matematyka-algebra php/Math/Algebra/algebraCategories.php [NC]
+RewriteRule ^math-logic php/Math/Logic/logicCategories.php [NC]
+RewriteRule ^matematyka-logika php/Math/Logic/logicCategories.php [NC]
+
+RewriteRule ^math php/Math/contents.php [NC]
+RewriteRule ^matematyka php/Math/contents.php [NC]
+
+RewriteRule ^physics-astrophysics-black-holes php/Physics/Astrophysics/BlackHolesContentMenu.php [NC]
+RewriteRule ^fizyka-astrofizyka-czarne-dziury php/Physics/Astrophysics/BlackHolesContentMenu.php [NC]
+RewriteRule ^physics-astrophysics-stars php/Physics/Astrophysics/StarsContentMenu.php [NC]
+RewriteRule ^fizyka-astrofizyka-gwiazdy php/Physics/Astrophysics/StarsContentMenu.php [NC]
+
+RewriteRule ^physics-astrophysics php/Physics/Astrophysics/astrophysicsCategories.php [NC]
+RewriteRule ^fizyka-astrofizyka php/Physics/Astrophysics/astrophysicsCategories.php [NC]
+
+RewriteRule ^fizyka php/Physics/contents.php [NC]
+RewriteRule ^physics php/Physics/contents.php [NC]
+
+RewriteRule ^chemistry php/Chemistry/contents.php [NC]
+RewriteRule ^chemia php/Chemistry/contents.php [NC]
+
+RewriteRule ^login php/login-page.php [NC]
+RewriteRule ^register php/register-page.php [NC]
+RewriteRule ^logout php/logout.php [NC]
+RewriteRule ^registration-success php/success_reg.php [NC]
+
+
+RewriteRule ^search-result php/search_result.php?userSearch=/$1 [QSA,L]
+RewriteRule ^formula_([0-9]+)_(.+)?$ php/formulaContent.php?cont=/$1&friendlyName=/$2 [L]
